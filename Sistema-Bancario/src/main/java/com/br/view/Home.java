@@ -9,6 +9,8 @@ public class Home {
 	public static void main(String[] args) {
 
 		int option = 1000;
+		Functions functions = new Functions();
+		
 		input = new Scanner(System.in);
 
 		// Carrega menu para interação com usuário.
@@ -27,6 +29,7 @@ public class Home {
 			switch (option) {
 
 			case 1:
+				functions.cadastrarConta();
 				break;
 
 			case 0:
