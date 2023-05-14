@@ -44,6 +44,10 @@ public class Home {
 				functions.debitarConta();
 				break;	
 				
+			case 5:
+				functions.transferirRecurso();
+				break;
+				
 			case 0:
 				break;
 
