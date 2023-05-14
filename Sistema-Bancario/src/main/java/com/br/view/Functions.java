@@ -58,7 +58,7 @@ public class Functions {
 		if (conta != null) {
 			System.out.print(
 					"Conta número: " + conta.getNumeroConta() + " localizada. Informe o valor a ser creditado: ");
-			double valor = input.nextInt();
+			double valor = input.nextDouble();
 
 			try {
 				conta.creditarConta(valor);
@@ -72,6 +72,32 @@ public class Functions {
 			System.out.println("Não foram localizadas contas bancária com o número informado." + " \n");
 		}
 
+	}
+
+	// Método que implementa o débito em uma conta.
+	public void debitarConta() {		
+
+		System.out.print("Informe o número da conta desejada para consulta: ");
+		int numConta = input.nextInt();
+
+		Conta conta = bd.retornaContaByNumero(numConta);
+
+		if (conta != null) {
+			System.out.print(
+					"Conta número: " + conta.getNumeroConta() + " localizada. Informe o valor a ser debitado: ");
+			double valor = input.nextDouble();
+
+			try {
+				conta.debitarConta(valor);
+				System.out.println("Débito realizado com sucesso!! Novo saldo: " + conta.getSaldo() + " \n");
+			} catch (Exception e) {
+				System.out.println("Erro na realização do cŕedito na conta!!" + " \n");
+			}
+		}
+
+		else {
+			System.out.println("Não foram localizadas contas bancária com o número informado." + " \n");
+		}
 	}
 
 }

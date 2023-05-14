@@ -40,6 +40,10 @@ public class Home {
 				functions.creditarConta();
 				break;	
 				
+			case 4:
+				functions.debitarConta();
+				break;	
+				
 			case 0:
 				break;
 
