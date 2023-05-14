@@ -36,6 +36,10 @@ public class Home {
 				functions.consultarSaldo();
 				break;
 				
+			case 3:
+				functions.creditarConta();
+				break;	
+				
 			case 0:
 				break;
 
