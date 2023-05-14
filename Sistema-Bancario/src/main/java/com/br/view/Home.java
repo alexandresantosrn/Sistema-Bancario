@@ -31,7 +31,11 @@ public class Home {
 			case 1:
 				functions.cadastrarConta();
 				break;
-
+			
+			case 2:
+				functions.consultarSaldo();
+				break;
+				
 			case 0:
 				break;
 
